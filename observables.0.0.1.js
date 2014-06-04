@@ -17,7 +17,7 @@ var observables = (function (obj) {
 
 	function lockTheObject (obj) {
 		Object.freeze(obj);
-		consoole.log(obj + ' is freezed.');
+		consoole.log(obj + ' is unchangable.');
 	}
 
 	function delegateObservableStatus (objs, state) {
