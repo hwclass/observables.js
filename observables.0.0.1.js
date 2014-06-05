@@ -2,7 +2,13 @@ var observables = (function (obj) {
 
 	function handlerEventAfterChange (changedPropList) {
 		for (var count=0, len=changedPropList.length; count < len; count++) {
-			console.table('prop:' + changedPropList[count].name + " was " + changedPropList[count].type + " and is now " + changedPropList[count].object[changedPropList[count].name]);
+			var message = '';
+			if (changedPropList[count].type === 'add') {
+				message = 'added';
+			} else if (changedPropList[count].type === 'update') {
+				message = 'updated';
+			}
+			console.log(changedPropList[count].name, changedPropList[count].oldValue, message);
 		}
 	}
 
