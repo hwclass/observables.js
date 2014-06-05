@@ -11,10 +11,10 @@ An small object tracing and logging library.
 ==============
 <pre lang="javascript">
 <code>
-'''var testObj = {};
-observables.trace([testObj]);'''
+var testObj = {};
+observables.trace([testObj]);
 /*when the changing occurs like below:*/
-'''test.firstProp = "Changed property."''
+test.firstProp = "Changed property."
 /*console is logged with the current object is changed and its new value.*/
 console => prop:a was add and is now 1
 </code>
@@ -24,7 +24,7 @@ console => prop:a was add and is now 1
 ==============
 <pre lang="javascript">
 <code>
-'''observables.leave([testObj]);'''
+observables.leave([testObj]);
 /*console is logged with the current object is leaved alone.*/
 console => [object Object] is now unobservable.
 </code>
@@ -34,7 +34,7 @@ console => [object Object] is now unobservable.
 ==============
 <pre lang="javascript">
 <code>
-'''observables.freeze([testObj]);'''
+observables.freeze([testObj]);
 /*console is logged with the current object is freezed.*/
 console => [object Object] is now unchangable.
 </code>
@@ -44,8 +44,8 @@ console => [object Object] is now unchangable.
 ==============
 <pre lang="javascript">
 <code>
-'''observables.trace([testObj1, testObj2, testObj3]);
+observables.trace([testObj1, testObj2, testObj3]);
 observables.leave([testObj1, testObj2, testObj3]);
-observables.freeze([testObj1, testObj2, testObj3]);'''
+observables.freeze([testObj1, testObj2, testObj3]);
 </code>
 </pre>
