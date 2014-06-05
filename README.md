@@ -9,8 +9,8 @@ An small object tracing and logging library.
 
 ###1- If you want a plain JS object to be watched, push the original object after initializing:
 ==============
-<pre>
-	<code lang="javascript">
+<pre lang="javascript">
+	<code>
 		'''var testObj = {};
 		observables.trace([testObj]);
 		/*when the changing occurs like below:*/
@@ -22,8 +22,8 @@ An small object tracing and logging library.
 
 ###2 - If you want a plain JS object not to be watched, push the object again like this:
 ==============
-<pre>
-	<code lang="javascript">
+<pre lang="javascript">
+	<code>
 		'''observables.leave([testObj]);
 		/*console is logged with the current object is leaved alone.*/
 		[object Object] is now unobservable.'''
@@ -32,8 +32,8 @@ An small object tracing and logging library.
 
 ###3 - If you want a plain JS object to be freeze (so, not to let it change its value), push the object like this:
 ==============
-<pre>
-	<code lang="javascript">
+<pre lang="javascript">
+	<code>
 		'''observables.freeze([testObj]);
 		/*console is logged with the current object is freezed.*/
 		[object Object] is now unchangable.'''
@@ -42,8 +42,8 @@ An small object tracing and logging library.
 
 ###4 - If you want, you can observe, unobserve and freeze more than an object:
 ==============
-<pre>
-	<code lang="javascript">
+<pre lang="javascript">
+	<code>
 		'''observables.trace([testObj1, testObj2, testObj3]);
 		observables.leave([testObj1, testObj2, testObj3]);
 		observables.freeze([testObj1, testObj2, testObj3]);'''
