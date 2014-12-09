@@ -43,6 +43,7 @@ var observables = (function (obj) {
 	}
 
 	return {
+		
 		trace : function (objs) {
 			delegateObservableStatus(objs, 'trace');
 		},
