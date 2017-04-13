@@ -1,14 +1,10 @@
 observables.js
-==============
 
 An small object tracing and logging library.
 
-<i>This tiny library can be used with Harmony polyfills that supports Object.observe method. (etc. use Chrome Canary)</i>
+### Usage
 
-##usage
-
-###1- If you want a plain JS object to be watched, push the original object after initializing:
-==============
+#### You can have a plain JS object watched
 <pre lang="javascript">
 <code>
 var testObj = {};
@@ -20,8 +16,7 @@ console => prop:a was add and is now 1
 </code>
 </pre>
 
-###2 - If you want a plain JS object not to be watched, push the object again like this:
-==============
+#### You can have a plain JS object not to be watched
 <pre lang="javascript">
 <code>
 observables.leave([testObj]);
@@ -30,8 +25,7 @@ console => [object Object] is now unobservable.
 </code>
 </pre>
 
-###3 - If you want a plain JS object to be freeze (so, not to let it change its value), push the object like this:
-==============
+#### You can have a plain JS object frozen (so, not to let it change its value)
 <pre lang="javascript">
 <code>
 observables.freeze([testObj]);
@@ -40,8 +34,7 @@ console => [object Object] is now unchangable.
 </code>
 </pre>
 
-###4 - If you want, you can observe, unobserve and freeze more than an object:
-==============
+#### You can have objects observed, unobserved and frozen
 <pre lang="javascript">
 <code>
 observables.trace([testObj1, testObj2, testObj3]);
